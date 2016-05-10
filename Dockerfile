@@ -16,9 +16,7 @@ RUN curl -L -o unifi_sysvinit_all.deb http://www.ubnt.com/downloads/unifi/4.8.18
   rm unifi_sysvinit_all.deb && \
   ln -s /var/lib/unifi /usr/lib/unifi/data
 
-RUN ln -s /var/lib/unifi /usr/lib/unifi/data
-
-EXPOSE 8080 8081 8443 8843 8880
+EXPOSE 8080 8443 8843 8880
 
 VOLUME ["/var/lib/unifi"]
 

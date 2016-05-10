@@ -27,6 +27,10 @@ docker run -d --name unifi \
               csmith/unifi:4.8.18
 ```
 
-Port 8443 is used for the HTTPS web interface, port 8080 used by APs.
+The container exposes these ports:
 
-The Dockerfile exposes these ports: 8081 8443 8843 8880
+  * 8080 (used by the UAPs to send messages to the controller)
+  * 8443 (admin web interface, HTTPS)
+  * 8843 (HTTPS captive portal redirection)
+  * 8880 (HTTP captive portal redirection)
+
