@@ -13,7 +13,8 @@ RUN \
 
 RUN curl -L -o unifi_sysvinit_all.deb http://www.ubnt.com/downloads/unifi/4.8.18/unifi_sysvinit_all.deb && \
   dpkg --install unifi_sysvinit_all.deb && \
-  rm unifi_sysvinit_all.deb
+  rm unifi_sysvinit_all.deb && \
+  ln -s /var/lib/unifi /usr/lib/unifi/data
 
 RUN ln -s /var/lib/unifi /usr/lib/unifi/data
 
