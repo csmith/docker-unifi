@@ -11,7 +11,7 @@ RUN \
     openjdk-8-jre-headless \
     software-properties-common
 
-RUN curl -L -o unifi_sysvinit_all.deb http://www.ubnt.com/downloads/unifi/4.8.18/unifi_sysvinit_all.deb && \
+RUN curl -L -o unifi_sysvinit_all.deb http://www.ubnt.com/downloads/unifi/5.0.7/unifi_sysvinit_all.deb && \
   dpkg --install unifi_sysvinit_all.deb && \
   rm unifi_sysvinit_all.deb && \
   ln -s /var/lib/unifi /usr/lib/unifi/data
