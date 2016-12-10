@@ -1,7 +1,7 @@
 FROM ubuntu:xenial 
 MAINTAINER Chris Smith <chris87@gmail.com> 
 
-ARG url=http://www.ubnt.com/downloads/unifi/5.2.7/unifi_sysvinit_all.deb
+ARG url=https://www.ubnt.com/downloads/unifi/4.8.20/unifi_sysvinit_all.deb
 
 RUN \
   apt-get update && \ 
