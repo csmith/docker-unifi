@@ -1,6 +1,8 @@
 FROM ubuntu:xenial 
 MAINTAINER Chris Smith <chris87@gmail.com> 
 
+ARG url=http://www.ubnt.com/downloads/unifi/5.2.7/unifi_sysvinit_all.deb
+
 RUN \
   apt-get update && \ 
   apt-get -y install \
@@ -11,7 +13,7 @@ RUN \
     openjdk-8-jre-headless \
     software-properties-common
 
-RUN curl -L -o unifi_sysvinit_all.deb http://www.ubnt.com/downloads/unifi/5.2.7/unifi_sysvinit_all.deb && \
+RUN curl -L -o unifi_sysvinit_all.deb $url && \
   dpkg --install unifi_sysvinit_all.deb && \
   rm unifi_sysvinit_all.deb && \
   ln -s /var/lib/unifi /usr/lib/unifi/data
